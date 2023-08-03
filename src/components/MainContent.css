@@ -1,12 +1,10 @@
-.main_content {
-  margin-top: 40px;
-  padding-left: 20px;
-  color: #fff;
-}
 .main_heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 40px;
+  padding-left: 20px;
+  color: #fff;
 }
 .main_heading > p {
   color: red;
