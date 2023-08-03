@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import "./MainContent.css";
 
 export default function MainContent() {
+  //using the useState hook to store the data
   const [video, setVideo] = useState([]);
+  //using the useEffect hook to display the data
   useEffect(() => {
     axios
       .get("https://api.ineedaword.org/video?showcaseId=7769133")
@@ -22,7 +24,7 @@ export default function MainContent() {
         <p>See All</p>
       </div>
       <div className="movies_list">
-        {/* mapping through the video array and display the elements */}
+        {/* mapping through the video array and displaying the elements */}
         {video.map((element, index) => (
           <div key={index} className="movies">
             <img src={element.thumbnail} alt="" />
