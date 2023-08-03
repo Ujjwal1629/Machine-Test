@@ -1,0 +1,88 @@
+.main_content {
+  margin-top: 40px;
+  padding-left: 20px;
+  color: #fff;
+}
+.main_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_heading > p {
+  color: red;
+  margin-right: 20px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.main_heading > p:hover {
+  opacity: 1;
+}
+.main_heading > h1 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.movies_list {
+  margin-top: 15px;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+::-webkit-scrollbar {
+  width: 0; /* this will remove scrollbar space */
+  background: transparent; /* this will make scrollbar invisible */
+}
+.movies {
+  display: flex;
+  flex-direction: row;
+  padding-left: 40px;
+  position: relative;
+}
+.movies:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+.movies:first-child {
+  padding-left: 0px;
+}
+.movies > img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.movies_content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.movies_content > h1 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.movies_content > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.movies_content:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 568px) {
+  .movies {
+    padding-left: 0px;
+  }
+}
